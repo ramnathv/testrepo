@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+	<!--
+	Google HTML5 slide template
+
+Authors: Luke Mah?? (code)
+Marcin Wichary (code and design)
+
+Dominic Mazzoni (browser compatibility)
+Charles Chen (ChromeVox support)
+
+URL: http://code.google.com/p/html5slides/
+	-->
+	
+<html>
+<head>
+	
+	<meta charset='utf-8'>
+	<title>MGCR 271</title>
+  <meta name="description" content="MGCR 271">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/html5slides/styles.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/highlight.js/styles/github.css">
+  <!-- LOAD CUSTOM CSS -->
+  <link rel="stylesheet" href="assets/stylesheets/slidify.css">
+<link rel="stylesheet" href="assets/stylesheets/test_styles.css">
+
+    
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+	  <article class = "" id = "titleslide"> 
+	    <h1>MGCR 271</h1>
+      <p><a href="https://github.com/ramnathv/slidify"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a></p>
+
+
+
+<p><strong>Business Statistics</strong></p>
+
+<p>by Ramnath Vaidyanathan</p>
+
+    </article>
+	  <article class = "" id = "scplot"> 
+	    <h3>Scatterplot</h3>
+      <style>
+#scplot table{
+  font-size:18px;
+  width:40%;
+  float:left;
+}
+</style>
+
+
+
+<p><a class = 'definition'>Definition</a></p>
+
+<p>A <strong>scatterplot</strong> displays the relationship between two numerical variables.</p>
+
+<!-- html table generated in R 2.15.0 by xtable 1.7-0 package -->
+
+<!-- Tue Jul 10 09:23:16 2012 -->
+
+<TABLE border=1>
+<TR> <TH>  </TH> <TH> wt </TH> <TH> mpg </TH>  </TR>
+  <TR> <TD align="right"> Mazda RX4 </TD> <TD align="right"> 2.62 </TD> <TD align="right"> 21.00 </TD> </TR>
+  <TR> <TD align="right"> Mazda RX4 Wag </TD> <TD align="right"> 2.88 </TD> <TD align="right"> 21.00 </TD> </TR>
+  <TR> <TD align="right"> Datsun 710 </TD> <TD align="right"> 2.32 </TD> <TD align="right"> 22.80 </TD> </TR>
+  <TR> <TD align="right"> Hornet 4 Drive </TD> <TD align="right"> 3.21 </TD> <TD align="right"> 21.40 </TD> </TR>
+  <TR> <TD align="right"> Hornet Sportabout </TD> <TD align="right"> 3.44 </TD> <TD align="right"> 18.70 </TD> </TR>
+  <TR> <TD align="right"> Valiant </TD> <TD align="right"> 3.46 </TD> <TD align="right"> 18.10 </TD> </TR>
+  <TR> <TD align="right"> Duster 360 </TD> <TD align="right"> 3.57 </TD> <TD align="right"> 14.30 </TD> </TR>
+  <TR> <TD align="right"> Merc 240D </TD> <TD align="right"> 3.19 </TD> <TD align="right"> 24.40 </TD> </TR>
+   </TABLE>
+
+<p></div><div class="rimage right"><img src="assets/media/figures/scplot.png" class="plot" /></div><div class="rcode"></p>
+
+    </article>
+	  <article class = "" id = "slide-3"> 
+	    <h3>The Correlation Coefficient</h3>
+      
+
+<ul class = "build">
+<li>only measures the strength and direction of a <code>linear</code> relationship.</li>
+<li>ignores the distinction between response and explanatory variables.</li>
+<li>is not affected by changes in the unit of measurement.</li>
+<li>is always between \(\pm 1\)</li>
+<li>is strongly affected by outliers</li>
+</ul>
+
+    </article>
+	  <article class = "" id = "highway"> 
+	    <h3>Highway Signs</h3>
+      <style>
+#highway p{
+  font-family: 'Crimson Text', 'Palatino';
+  color: #455760;
+  font-size:21px;
+}
+</style>
+
+
+
+<p>A Pennsylvania research firm conducted a study in which 30 drivers (of ages 18 to 82 years old) were sampled, and for each one, the maximum distance (in feet) at which he/she could read a newly designed sign was determined. The goal of this study was to explore the relationship between a driver’s age and the maximum distance at which signs were legible, and then use the study’s findings to improve safety for older drivers. </p>
+
+    </article>
+	  <article class = "middle" id = "slide-5"> 
+	    
+      <p></div><div class="rimage default"><img src="assets/media/figures/unnamed-chunk-1.svg" class="plot" /></div><div class="rcode"></p>
+
+    </article>
+	  <article class = "middle" id = "slide-6"> 
+	    
+      <p></div><div class="rimage default"><img src="assets/media/figures/unnamed-chunk-2.svg" class="plot" /></div><div class="rcode"></p>
+
+    </article>
+	  <article class = "middle" id = "slide-7"> 
+	    
+      <p><img src="http://goo.gl/YeF9x" alt="hotdog"></p>
+
+    </article>
+	  <article class = "middle" id = "slide-8"> 
+	    
+      <p>Are Hair and Eye Color Associated?</p>
+
+    </article>
+	  <article class = "fill" id = "slide-9"> 
+	    
+      <p><img src = 'http://goo.gl/RhWjw' width = 90%></img></p>
+
+<p><q style='background:rgba(102, 102, 102, 0.5);font-size:80px;color:yellow;'>Are Hair and Eye Color Associated?</q></p>
+
+    </article>
+	  <article class = "" id = "slide-10"> 
+	    
+      <iframe src="https://docs.google.com/spreadsheet/embeddedform?formkey=dGd4V1ZlQU5kWXVuYTd1Yy14ODljTnc6MQ" width="760" height="639" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+    </article>
+	  <article class = "" id = "slide-11"> 
+	    
+      <script>
+        window.onload = function () {
+            var r = Raphael("holder"),
+                pie = r.piechart(320, 240, 100, [55, 20, 13, 32, 5, 1, 2, 10], { legend: ["%%.%% - Enterprise Users", "IE Users"], legendpos: "west", href: ["http://raphaeljs.com", "http://g.raphaeljs.com"]});
+
+            r.text(320, 100, "Interactive Pie Chart").attr({ font: "20px sans-serif" });
+            pie.hover(function () {
+                this.sector.stop();
+                this.sector.scale(1.1, 1.1, this.cx, this.cy);
+
+                if (this.label) {
+                    this.label[0].stop();
+                    this.label[0].attr({ r: 7.5 });
+                    this.label[1].attr({ "font-weight": 800 });
+                }
+            }, function () {
+                this.sector.animate({ transform: 's1 1 ' + this.cx + ' ' + this.cy }, 500, "bounce");
+
+                if (this.label) {
+                    this.label[0].animate({ r: 5 }, 500, "bounce");
+                    this.label[1].attr({ "font-weight": 400 });
+                }
+            });
+        };
+</script>
+
+<style>
+#holder {
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-webkit-box-shadow: 0 1px 3px #666;
+background: #ddd url(http://raphaeljs.com/images/bg.png);
+margin: auto auto;
+width: 640px;
+height: 480px;
+}
+</style>
+
+<div id="holder"></div>
+
+    </article>
+	  <article class = "" id = "slide-12"> 
+	    <h3>Two Way Tables</h3>
+      
+
+<p>A <code>two-way-table</code> summarizes the relationship between two <code>categorical</code> variables using the frequency of occurrence for every possible combination.</p>
+
+<div style = 'width:60%;margin:0 auto'>
+<!-- html table generated in R 2.15.0 by xtable 1.7-0 package -->
+<!-- Tue Jul 10 09:23:17 2012 -->
+<TABLE border=1>
+<TR> <TH>  </TH> <TH> Brown </TH> <TH> Blue </TH> <TH> Hazel </TH> <TH> Green </TH> <TH> Sum </TH>  </TR>
+  <TR> <TD align="right"> Black </TD> <TD align="right"> 32 </TD> <TD align="right"> 11 </TD> <TD align="right"> 10 </TD> <TD align="right"> 3 </TD> <TD align="right"> 56 </TD> </TR>
+  <TR> <TD align="right"> Brown </TD> <TD align="right"> 53 </TD> <TD align="right"> 50 </TD> <TD align="right"> 25 </TD> <TD align="right"> 15 </TD> <TD align="right"> 143 </TD> </TR>
+  <TR> <TD align="right"> Red </TD> <TD align="right"> 10 </TD> <TD align="right"> 10 </TD> <TD align="right"> 7 </TD> <TD align="right"> 7 </TD> <TD align="right"> 34 </TD> </TR>
+  <TR> <TD align="right"> Blond </TD> <TD align="right"> 3 </TD> <TD align="right"> 30 </TD> <TD align="right"> 5 </TD> <TD align="right"> 8 </TD> <TD align="right"> 46 </TD> </TR>
+  <TR> <TD align="right"> Sum </TD> <TD align="right"> 98 </TD> <TD align="right"> 101 </TD> <TD align="right"> 47 </TD> <TD align="right"> 33 </TD> <TD align="right"> 279 </TD> </TR>
+   </TABLE>
+
+
+</div>
+
+    </article>
+	  <article class = "" id = "slide-13"> 
+	    <h3>Notes</h3>
+      
+
+<ul>
+<li>Two-way tables organize data about two categorical variables. </li>
+<li>The row variable is eye color. </li>
+<li>The column variable is hair color. </li>
+<li>Each combination of values for these two variables is called a cell. </li>
+<li>Each cell counts the frequency of occurrence of the combination.</li>
+</ul>
+
+    </article>
+	  <article class = "" id = "slide-14"> 
+	    <h3>Tale of Three Distributions</h3>
+      
+
+<p>When dealing with two-way-tables, you will encounter three types of distributions.</p>
+
+<ol class = "build">
+<li><strong>Marginal Distributions</strong>  specify the distribution of one variable independent of the other variable.</li>
+<li><strong>Joint Distributions</strong> specify the distribution of combinations of the two variables.</li>
+<li><strong>Conditional Distributions</strong> specify the distribution of one variable, given the value of the other.</li>
+</ol>
+
+    </article>
+	  <article class = "" id = "slide-15"> 
+	    <h3>Test Embedding</h3>
+      
+
+<p></div><div class="rimage default"><img src="assets/media/figures/unnamed-chunk-3.svg" class="plot" /></div><div class="rcode"></p>
+
+    </article>
+	  <article class = "shout" id = "slide-16"> 
+	    <h2><a href="http://github.com/ramnathv">Demo</a></h2>
+      
+
+    </article>
+	  <article class = "middle" id = "slide-17"> 
+	    
+      <p><img src="http://placehold.it/900x700" alt="image"></p>
+
+    </article>
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/html5slides/slides.js'></script>
+	<!-- LOAD MATHJAX JS -->
+  <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         inlineMath: [['$','$'], ['\\(','\\)']],
+         processEscapes: true
+       }
+     });
+  </script>
+  <script type="text/javascript"  
+src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <!-- DONE LOADING MATHJAX -->
+	  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING CSS FILES AND JS -->
+
+		<script src="assets/scripts/1.raphael.js"></script>
+<script src="assets/scripts/2.g.raphael.js"></script>
+<script src="assets/scripts/3.g.pie.js"></script>
+
+	
+</html>

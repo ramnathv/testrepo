@@ -1,0 +1,161 @@
+/*@import url(http://fonts.googleapis.com/css?family=Inconsolata);*/
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Cabin);
+
+.slide.inner > section.p {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.chevron {
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    border-style: solid;
+    border-color: transparent;
+    /* chevron color */
+    border-right-color: red;
+    /* for left pointers, right border is 0 */
+    border-width: 23px 23px 23px 0;
+    float: left;
+    margin: 10px;
+}
+
+.gchart{
+  width:  800;
+  height: 560;
+  frameborder: 0;
+  marginheight: 0; 
+  marginwidth: 0;
+}
+
+/*div.slide {
+    background-color: #E0DEDE;
+}*/
+
+/*img {
+    float:left;
+}*/
+
+q {
+  display: block;
+  font-size: 48px;
+  line-height: 56px;
+  
+  margin-left: 50px;
+  
+  margin-top: 100px;
+  margin-right: 150px;    
+}
+q::before {
+  content: '“';
+  
+  position: absolute;
+  display: inline-block;
+  margin-left: -2.1em;
+  width: 2em;
+  text-align: right;
+  
+  font-size: 90px;
+  color: rgb(192, 192, 192);
+}
+q::after {
+  content: '”';
+
+  position: absolute;  
+  margin-left: .1em;
+
+  font-size: 90px;
+  color: rgb(192, 192, 192);  
+}
+div.author {
+  text-align: right;  
+  font-size: 40px;
+  
+  margin-top: 20px;
+  margin-right: 150px;    
+}
+div.author::before {
+  content: '—';
+}
+
+
+.slide.fill2 img{
+  width: 90%;    
+}
+
+.slide.fill img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+
+  border-radius: 10px;
+  -o-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+
+/*  z-index: -1;*/
+}
+
+.slide.fill .slide.fill2 h3 {
+  background: rgba(255, 255, 255, .75);
+  padding-top: .2em;
+  padding-bottom: .3em;
+  margin-top: -.2em;
+  margin-left: -60px;
+  padding-left: 60px;
+  margin-right: -60px;
+  padding-right: 60px;
+}
+
+.slide.statdist iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 98%;
+  height: 96%;
+  frameborder:0;
+
+  border: 5px;
+  margin: 5px;
+
+  border-radius: 10px;
+  -o-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+
+/*  z-index: -1;*/
+}
+
+.slide.fill iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 90%;
+  frameborder:0;
+
+  border: 30px;
+  margin: 30px;
+
+  border-radius: 10px;
+  -o-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+
+/*  z-index: -1;*/
+}
+
+.cite {
+  position: absolute;
+  left: 30px;
+  top: 660px;
+  padding-right: 175px;
+  font-size: 80%;
+  font-color: #eee;
+  letter-spacing: 0;  
+  line-height: 18px;
+}

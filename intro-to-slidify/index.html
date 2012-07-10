@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+	<!--
+	Google HTML5 slide template
+
+Authors: Luke Mah?? (code)
+Marcin Wichary (code and design)
+
+Dominic Mazzoni (browser compatibility)
+Charles Chen (ChromeVox support)
+
+URL: http://code.google.com/p/html5slides/
+	-->
+	
+<html>
+<head>
+	
+	<meta charset='utf-8'>
+	<title>Slidify</title>
+  <meta name="description" content="Slidify">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+	
+	<!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/html5slides/styles.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/highlight.js/styles/github.css">
+  <!-- LOAD CUSTOM CSS -->
+  <link rel="stylesheet" href="assets/stylesheets/slidify.css">
+<link rel="stylesheet" href="assets/stylesheets/test_styles.css">
+
+    
+</head>
+<body style='display: none'>
+	<section class='slides layout-regular template-regular'>
+	  <article class = "" id = "titleslide"> 
+	    <h1>Slidify</h1>
+      <p><a href="https://github.com/ramnathv/slidify"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a></p>
+
+
+
+<p><strong>Reproducible HTML5 Slides Made Easy</strong></p>
+
+<p>by Ramnath Vaidyanathan</p>
+
+    </article>
+	  <article class = "" id = "slide-2"> 
+	    
+      <p><q> Slidify is a tool that makes it easy to create, customize and publish, reproducible HTML5 slide decks using R Markdown.</q></p>
+
+    </article>
+	  <article class = "" id = "slide-3"> 
+	    <h3>Install Slidify</h3>
+      
+
+<p>Slidify can be installed from <code>github</code> using <code>devtools</code></p>
+
+<pre><code>install.packages(&#39;devtools&#39;)
+require(devtools)
+install_github(&#39;slidify&#39;, &#39;ramnathv&#39;)
+</code></pre>
+
+<p>You also need to install dependencies from <code>github</code></p>
+
+<pre><code>install_github(&#39;knitr&#39;, &#39;yihui&#39;)
+install_github(&#39;whisker&#39;, &#39;edwindj&#39;)
+install_github(&#39;markdown&#39;, &#39;rstudio&#39;)
+</code></pre>
+
+    </article>
+	  <article class = "" id = "slide-4"> 
+	    
+      <p><q> Slidify is a tool that makes it easy to <span class = 'red'>create</span>, customize and publish, reproducible HTML5 slide decks using R Markdown.</q></p>
+
+    </article>
+	  <article class = "" id = "slide-5"> 
+	    <h3>Create a Slide Deck</h3>
+      
+
+<p>Write in <a href="http://goo.gl/KKdaf">R Markdown</a>, separating slides by a horizontal rule <code>---</code>.</p>
+
+<pre><code class="markdown">  ---
+
+  # My First Slidify Deck
+  by Ramnath Vaidyanathan
+
+  ---
+
+  ### Slide 1
+
+  This is an unordered list 
+
+  - Point 1
+  - Point 2
+  - Point 3
+  - Point 4
+
+  ---
+</code></pre>
+
+    </article>
+	  <article class = "" id = "slide-6"> 
+	    <h1>My First Slidify Deck</h1>
+      
+
+<p>by Ramnath Vaidyanathan</p>
+
+    </article>
+	  <article class = "" id = "slide-7"> 
+	    <h3>Slide 1</h3>
+      
+
+<p>This is an unordered list </p>
+
+<ul>
+<li>Point 1</li>
+<li>Point 2</li>
+<li>Point 3</li>
+<li>Point 4</li>
+</ul>
+
+    </article>
+	  <article class = "" id = "slide-8"> 
+	    <h3>Add Slide Classes</h3>
+      
+
+<p>Add slide classes and id by appending them to the slide separator</p>
+
+<pre><code>  --- fill #montreal
+
+  ### Montreal by Night Time
+
+  ![monteral](http://goo.gl/cF6W2)
+
+
+  --- middle
+
+  Slidify is Awesome
+
+</code></pre>
+
+    </article>
+	  <article class = "fill" id = "slide-9"> 
+	    <h3>Montreal by Night Time</h3>
+      
+
+<p><img src="http://goo.gl/cF6W2" alt="montreal"></p>
+
+    </article>
+	  <article class = "middle" id = "slide-10"> 
+	    
+      <p>Slidify is Awesome!</p>
+
+    </article>
+	  <article class = "" id = "slide-11"> 
+	    
+      <p><q> Slidify is a tool that makes it easy to create, <span class = 'red'>customize</span> and publish, reproducible HTML5 slide decks using R Markdown.</q></p>
+
+    </article>
+	  <article class = "" id = "slide-12"> 
+	    <h3>Customize</h3>
+      
+
+<p><code>slidify</code> is designed to be modular and provide a high degree of customization for the more advanced users.</p>
+
+<table><thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>framework</td>
+<td>slide generation framework to use</td>
+</tr>
+<tr>
+<td>theme</td>
+<td>theme to use for styling slide content</td>
+</tr>
+<tr>
+<td>highlighter</td>
+<td>tool to use for syntax highlighting</td>
+</tr>
+<tr>
+<td>histyle</td>
+<td>style to use for syntax highlighting</td>
+</tr>
+<tr>
+<td>copy_libraries</td>
+<td>copy library files to slide directory?</td>
+</tr>
+<tr>
+<td>lib_path</td>
+<td>path to libraries</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td>use mathjax ?</td>
+</tr>
+<tr>
+<td>embed</td>
+<td>embed local images ?</td>
+</tr>
+</tbody></table>
+
+    </article>
+	  <article class = "" id = "slide-13"> 
+	    <h3>Style your Slides!</h3>
+      
+
+<p>Use the options <code>framework</code> and <code>theme</code> to style your deck!</p>
+
+<table><thead>
+<tr>
+<th>framework</th>
+<th>theme</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="http://html5slides.googlecode.com/">html5slides</a></td>
+<td>layout-default template-default</td>
+</tr>
+<tr>
+<td><a href="">html5rocks</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://imakewebthings.com/deck.js/">deck.js</a></td>
+<td>web2.0, swiss, neon</td>
+</tr>
+<tr>
+<td><a href="http://paulrouget.com/dzslides/">dzslides</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://github.com/adamzap/landslide">landslide</a></td>
+<td>default, tango, clean</td>
+</tr>
+<tr>
+<td><a href="http://pepelsbey.github.com/shower/en.htm">shower</a></td>
+<td>ribbon</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/Talks/Tools/Slidy2/Overview.html#">slidy</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">slideous</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">beamer</a></td>
+<td></td>
+</tr>
+</tbody></table>
+
+    </article>
+	  <article class = "" id = "slide-14"> 
+	    <h3>Highlight Syntax</h3>
+      
+
+<p>Use the options <code>highlighter</code> and <code>histyle</code> to control syntax highlighting</p>
+
+<table><thead>
+<tr>
+<th>highlighter</th>
+<th>histyle</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>highlight</td>
+<td>see <code>knit_theme$get()</code></td>
+</tr>
+<tr>
+<td>highlight.js</td>
+<td>see <a href="http://goo.gl/uEJj">http://goo.gl/uEJj</a></td>
+</tr>
+<tr>
+<td>google_prettify</td>
+<td>see <a href="http://goo.gl/yUikj">http://goo.gl/yUikj</a></td>
+</tr>
+</tbody></table>
+
+    </article>
+	  <article class = "" id = "slide-15"> 
+	    
+      <p><q> Slidify is a tool that makes it easy to create, customize and <span class = 'red'>publish</span>, reproducible HTML5 slide decks from R Markdown.</q></p>
+
+    </article>
+	  <article class = "" id = "slide-16"> 
+	    <h3>Publish Deck</h3>
+      
+
+<p>Publish your deck on <code>RPubs</code> using two lines of code</p>
+
+<pre><code>slidify(&#39;slides.Rmd&#39;, options = list(embed = TRUE))
+markdown::rpubsUpload(&#39;My First Presentation&#39;, &#39;slides.html&#39;)
+</code></pre>
+
+<p>Development is underway to provide support for publishing to </p>
+
+<ul>
+<li>Github Pages</li>
+<li>Dropbox</li>
+</ul>
+
+    </article>
+	  <article class = "" id = "slide-17"> 
+	    
+      <p><q> Slidify is a tool that makes it easy to create, customize publish, <span class = 'red'>reproducible</span> HTML5 slide decks from R Markdown.</q></p>
+
+    </article>
+	  <article class = "" id = "slide-18"> 
+	    <h3>Reproducible Deck</h3>
+      
+
+<pre><code>    --- 
+
+    ### A Simple Plot
+
+    Let us create a simple scatterplot.
+
+    ```{r simple-plot, fig.height = 6, fig.align = &#39;center&#39;, message = F}
+    require(ggplot2)
+    qplot(wt, mpg, data = mtcars)
+    ```
+
+    --- 
+
+    ### A Table
+
+    ```{r table, results = &#39;asis&#39;, comment = NA}
+    library(xtable)
+    options(xtable.type = &#39;html&#39;)
+    xtable(head(mtcars))
+    ```
+
+</code></pre>
+
+    </article>
+	  <article class = "" id = "slide-19"> 
+	    <h3>A Simple Plot</h3>
+      
+
+<p>Let us create a simple scatterplot.</p>
+
+<pre><code>require(ggplot2)
+qplot(wt, mpg, data = mtcars)
+</code></pre>
+
+<p></div><div class="rimage center"><img src="assets/media/figures/simple-plot.png" class="plot" /></div><div class="rcode"></p>
+
+    </article>
+	  <article class = "" id = "slide-20"> 
+	    <h3>A Table</h3>
+      
+
+<pre><code>library(xtable)
+options(xtable.type = &quot;html&quot;)
+xtable(head(mtcars))
+</code></pre>
+
+<!-- html table generated in R 2.15.0 by xtable 1.7-0 package -->
+
+<!-- Tue Jul 10 09:18:24 2012 -->
+
+<TABLE border=1>
+<TR> <TH>  </TH> <TH> mpg </TH> <TH> cyl </TH> <TH> disp </TH> <TH> hp </TH> <TH> drat </TH> <TH> wt </TH> <TH> qsec </TH> <TH> vs </TH> <TH> am </TH> <TH> gear </TH> <TH> carb </TH>  </TR>
+  <TR> <TD align="right"> Mazda RX4 </TD> <TD align="right"> 21.00 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 160.00 </TD> <TD align="right"> 110.00 </TD> <TD align="right"> 3.90 </TD> <TD align="right"> 2.62 </TD> <TD align="right"> 16.46 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD align="right"> Mazda RX4 Wag </TD> <TD align="right"> 21.00 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 160.00 </TD> <TD align="right"> 110.00 </TD> <TD align="right"> 3.90 </TD> <TD align="right"> 2.88 </TD> <TD align="right"> 17.02 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 4.00 </TD> </TR>
+  <TR> <TD align="right"> Datsun 710 </TD> <TD align="right"> 22.80 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 108.00 </TD> <TD align="right"> 93.00 </TD> <TD align="right"> 3.85 </TD> <TD align="right"> 2.32 </TD> <TD align="right"> 18.61 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 4.00 </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD align="right"> Hornet 4 Drive </TD> <TD align="right"> 21.40 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 258.00 </TD> <TD align="right"> 110.00 </TD> <TD align="right"> 3.08 </TD> <TD align="right"> 3.21 </TD> <TD align="right"> 19.44 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 3.00 </TD> <TD align="right"> 1.00 </TD> </TR>
+  <TR> <TD align="right"> Hornet Sportabout </TD> <TD align="right"> 18.70 </TD> <TD align="right"> 8.00 </TD> <TD align="right"> 360.00 </TD> <TD align="right"> 175.00 </TD> <TD align="right"> 3.15 </TD> <TD align="right"> 3.44 </TD> <TD align="right"> 17.02 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 3.00 </TD> <TD align="right"> 2.00 </TD> </TR>
+  <TR> <TD align="right"> Valiant </TD> <TD align="right"> 18.10 </TD> <TD align="right"> 6.00 </TD> <TD align="right"> 225.00 </TD> <TD align="right"> 105.00 </TD> <TD align="right"> 2.76 </TD> <TD align="right"> 3.46 </TD> <TD align="right"> 20.22 </TD> <TD align="right"> 1.00 </TD> <TD align="right"> 0.00 </TD> <TD align="right"> 3.00 </TD> <TD align="right"> 1.00 </TD> </TR>
+   </TABLE>
+
+    </article>
+	  <article class = "middle" id = "slide-21"> 
+	    
+      <p><a href = 'http://yihui.name/knitr'>
+  <img src = 'http://i.imgur.com/zy6wB.png'></img>
+</a></p>
+
+    </article>
+	  <article class = "" id = "slide-22"> 
+	    <h3>knitr = Sweave 2.0</h3>
+      
+
+<ul class = "build">
+<li>Faithful Output.</li>
+<li>Markup Agnostic.*</li>
+<li>Language Agnostic.*</li>
+<li>Flexible Graphics.</li>
+<li>Beautiful Display.</li>
+<li>Extensible Design.</li>
+<li>Enthusiastic Developer.</li>
+<li>Strong Community.</li>
+</ul>
+
+<p class = 'build'><span class = 'red'><strong>Full Disclosure:</strong> I am an active contributor to `knitr`. So the views expressed here on how awesome knitr is might be biased.</span></p>
+
+    </article>
+	  <article class = "" id = "slide-23"> 
+	    <h3>Markup Agnostic</h3>
+      
+
+<p>Currently supports most of the popular markups including</p>
+
+<ul>
+<li>\(\LaTeX\)</li>
+<li>Markdown</li>
+<li>ReStructured Text</li>
+<li>HTML</li>
+</ul>
+
+    </article>
+	  <article class = "" id = "slide-24"> 
+	    <h3>Language Agnostic</h3>
+      
+
+<p>Here is a code chunk with <code>python</code> code.</p>
+
+<pre><code class="python">x = &#39;hello, python world!&#39;
+print x
+print x.split(&#39; &#39;)
+</code></pre>
+
+<pre><code>hello, python world!
+[&#39;hello,&#39;, &#39;python&#39;, &#39;world!&#39;]
+</code></pre>
+
+<p>Here is a code chunk with <code>ruby</code> code</p>
+
+<pre><code class="ruby">x = &#39;hello, ruby world&#39;
+p x.split(&#39; &#39;)
+
+</code></pre>
+
+<pre><code>[&quot;hello,&quot;, &quot;ruby&quot;, &quot;world&quot;]
+</code></pre>
+
+    </article>
+	  <article class = "" id = "slide-25"> 
+	    <h3>Flexible Graphics</h3>
+      
+
+<p>Complete control over how plots are generated, captured, displayed and saved.</p>
+
+<table><thead>
+<tr>
+<th>Option</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>fig.keep</code></td>
+<td>&#39;high&#39;, &#39;all&#39;, &#39;none&#39;, &#39;first&#39;, &#39;last&#39;</td>
+<td>what plots to keep</td>
+</tr>
+<tr>
+<td><code>fig.show</code></td>
+<td>&#39;asis&#39;, &#39;hold&#39;, &#39;animate&#39;</td>
+<td>how to display multiple plots</td>
+</tr>
+<tr>
+<td><code>fig.width</code></td>
+<td>7</td>
+<td>width in inches</td>
+</tr>
+<tr>
+<td><code>fig.height</code></td>
+<td>7</td>
+<td>height in inches</td>
+</tr>
+<tr>
+<td><code>fig.align</code></td>
+<td>&#39;default&#39;, &#39;center&#39;, &#39;left&#39;, &#39;right&#39;</td>
+<td>how to align plots</td>
+</tr>
+<tr>
+<td><code>fig.path</code></td>
+<td>&#39;figure/&#39;</td>
+<td>path prefix to use</td>
+</tr>
+<tr>
+<td><code>dev</code></td>
+<td>&#39;pdf&#39;, &#39;png&#39;, ...</td>
+<td>plotting device to use</td>
+</tr>
+</tbody></table>
+
+    </article>
+	  <article class = "" id = "slide-26"> 
+	    <h3>Beautiful Display</h3>
+      
+
+<table><thead>
+<tr>
+<th>Option</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>highlight</code></td>
+<td>TRUE, FALSE</td>
+<td>highlight source code ?</td>
+</tr>
+<tr>
+<td><code>tidy</code></td>
+<td>TRUE, FALSE</td>
+<td>tidy source using <code>formatR</code> ?</td>
+</tr>
+<tr>
+<td><code>prompt</code></td>
+<td>TRUE, FALSE</td>
+<td>display prompt ?</td>
+</tr>
+<tr>
+<td><code>continue</code></td>
+<td>TRUE, FALSE</td>
+<td>display continuation ?</td>
+</tr>
+<tr>
+<td><code>echo</code></td>
+<td>TRUE, FALSE, 3:7</td>
+<td>display source? what lines ?</td>
+</tr>
+</tbody></table>
+
+    </article>
+	  <article class = "fill" id = "slide-27"> 
+	    <h3>Strong Community</h3>
+      
+
+<p><img class = 'centered' src = 'assets/media/images/knitr_github.png' width = 90%></img></p>
+
+    </article>
+	  <article class = "" id = "slide-28"> 
+	    
+      <p><q> Slidify makes it easy to create, customize and publish, reproducible HTML5 slide decks using <span class = 'red'>R Markdown</span>.</q></p>
+
+    </article>
+	  <article class = "" id = "slide-29"> 
+	    
+      <p><img width = 80% src = 'http://farm4.staticflickr.com/3375/3634418553_6cffd4e64d_z.jpg?zz=1' class = 'centered'></img></p>
+
+<div class = 'cite'>
+  Source: http://www.flickr.com/photos/benjibot/3634418553/
+</div>
+
+    </article>
+	  <article class = "" id = "slide-30"> 
+	    <h1>Demo of Markdown</h1>
+      
+
+    </article>
+	  <article class = "fill" id = "slide-31"> 
+	    
+      <iframe src = 'http://dillinger.io'></iframe>
+
+    </article>
+	  <article class = "" id = "slide-32"> 
+	    <h1>R Markdown</h1>
+      
+
+    </article>
+	  <article class = "fill" id = "slide-33"> 
+	    
+      <p><img class = 'centered' src = 'http://rstudio.org/images/docs/markdownChunk.png'></img></p>
+
+    </article>
+	  <article class = "" id = "slide-34"> 
+	    <h3>R Markdown = Markdown +++</h3>
+      
+
+<ul class = "build">
+<li>Treat newlines as real line breaks.</li>
+<li>Ignore intra-word underscores as formatting.</li>
+<li>Automatically link URLs.</li>
+<li>Recognize Fenced Code Blocks.</li>
+<li>Support Tables using <a href="http://michelf.com/projects/php-markdown/extra/#table">PHP Markdown Extra</a> syntax</li>
+<li>Better typography using <code>smartypants</code></li>
+<li>Support for Equations using MathJax</li>
+<li>Support for Image Bundling using Base64</li>
+</ul>
+
+    </article>
+	  <article class = "" id = "slide-35"> 
+	    <h3>Display Latex Equations</h3>
+      
+
+<p><strong>Raw Latex</strong></p>
+
+<pre><code class="tex">$$
+\begin{aligned}
+\dot{x} &amp; = \sigma(y - x) \\
+\dot{y} &amp; = \rho x - y - xz \\
+\dot{z} &amp; = -\beta z + xy 
+\end{aligned}
+$$
+</code></pre>
+
+<p><strong>Rendered Equation</strong></p>
+
+<p>\[
+\begin{aligned}
+\dot{x} & = \sigma(y - x) \\
+\dot{y} & = \rho x - y - xz \\
+\dot{z} & = -\beta z + xy 
+\end{aligned} 
+\]</p>
+
+    </article>
+	  <article class = "" id = "slide-36"> 
+	    <h1>Demo of R Markdown</h1>
+      
+
+    </article>
+	  <article class = "fill" id = "slide-37"> 
+	    
+      <iframe src = 'http://public.opencpu.org/apps/opencpu.demo/markdown/'></iframe>
+
+    </article>
+	  <article class = "" id = "slide-38"> 
+	    <h1>How does Slidify Work?</h1>
+      
+
+    </article>
+	  <article class = "middle" id = "slide-39"> 
+	    <h3>Knit, Split, Parse and Render!</h3>
+      
+
+<p><img alt = 'how_slidify_works'  src = 'assets/media/images/how_slidify_works.png' width = 100%></img></p>
+
+    </article>
+	  <article class = "" id = "slide-40"> 
+	    <h1>Journey of a Slide</h1>
+      
+
+    </article>
+	  <article class = "" id = "slide-41"> 
+	    <h3>Source</h3>
+      
+
+<pre><code class="markdown">    ---  plot #simple-plot
+
+    ### A Simple Plot ###
+
+    Let us create a simple scatterplot.
+
+    ```{r simple-plot, fig.height = 6, fig.align = &#39;center&#39;, message = F}
+    require(ggplot2)
+    qplot(wt, mpg, data = mtcars)
+    ```
+
+</code></pre>
+
+    </article>
+	  <article class = "" id = "slide-42"> 
+	    <h3>knit!</h3>
+      
+
+<pre><code> ---  plot #simple-plot
+
+  ### A Simple Plot ###
+
+  Let us create a simple scatterplot.
+
+     require(ggplot2)
+     qplot(wt, mpg, data = mtcars)
+
+  &lt;div class=&quot;rimage center&quot;&gt;
+   &lt;img src=&quot;figure/simple-plot.png&quot;  class=&quot;plot&quot; /&gt;
+  &lt;/div&gt;
+</code></pre>
+
+    </article>
+	  <article class = "smaller" id = "slide-43"> 
+	    
+      <pre><code>$header
+[1] &quot;&lt;h3&gt;A Simple Plot&lt;/h3&gt;&quot;
+
+$level
+[1] &quot;3&quot;
+
+$title
+[1] &quot;A Simple Plot&quot;
+
+$content
+[1] &quot;\n\n&lt;p&gt;Let us create a simple scatterplot.&lt;/p&gt;\n\n&lt;pre&gt;&lt;code&gt;require(ggplot2)\nqplot(wt, mpg, data = mtcars)\n&lt;/code&gt;&lt;/pre&gt;\n\n&lt;p&gt;&lt;/div&gt;&lt;div class=\&quot;rimage center\&quot;&gt;&lt;img src=\&quot;figure/simple-plot.png\&quot; class=\&quot;plot\&quot; /&gt;&lt;/div&gt;&lt;div class=\&quot;rcode\&quot;&gt;&lt;/p&gt;\n&quot;
+
+$sub
+[1] TRUE
+
+$id
+[1] &quot;slide-20&quot;
+
+$num
+[1] 20
+
+$classes
+[1] &quot;&quot;
+
+$raw
+[1] &quot; \n### A Simple Plot ###\n\nLet us create a simple scatterplot.\n \n```{r simple-plot, fig.height = 6, fig.align = &#39;center&#39;, message = F}\nrequire(ggplot2)\nqplot(wt, mpg, data = mtcars)\n```\n&quot;
+
+</code></pre>
+
+    </article>
+	  <article class = "" id = "slide-44"> 
+	    <h3>Layouts</h3>
+      
+
+<pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- META DATA  --&gt;
+    &lt;!-- SYSTEM STYLE SHEETS --&gt;
+  &lt;/head&gt;
+  &lt;body style=&#39;display: none&#39;&gt;
+    &lt;section class=&#39;slides {{ theme }}&#39;&gt;
+      {{#slides}}
+      &lt;article class = &quot;{{ classes }}&quot; id = &quot;{{id}}&quot;&gt; 
+       {{{ header }}}
+       {{{ content }}}
+      &lt;/article&gt;
+      {{/slides}}
+    &lt;/section&gt;
+  &lt;/body&gt;
+    &lt;!-- SYSTEM JAVASCRIPTS  --&gt;
+    &lt;!-- SYSTEM PARTIALS --&gt;
+&lt;/html&gt;
+</code></pre>
+
+    </article>
+	  <article class = "" id = "slide-45"> 
+	    <h3>Partials</h3>
+      
+
+<pre><code>{{#mathjax}}
+&lt;!-- LOAD MATHJAX JS --&gt;
+  &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+     MathJax.Hub.Config({
+       tex2jax: {
+         inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]],
+         processEscapes: true
+       }
+     });
+  &lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot;  
+src=&quot;https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML&quot;&gt;
+  &lt;/script&gt;
+  &lt;!-- DONE LOADING MATHJAX --&gt;
+{{/mathjax}}
+</code></pre>
+
+    </article>
+	  <article class = "" id = "slide-46"> 
+	    <h1>Credits</h1>
+      
+
+    </article>
+	  <article class = "" id = "slide-47"> 
+	    <h3>R Packages</h3>
+      
+
+<p>All the heavy lifting is actually done by three awesome R packages. <code>slidify</code> is merely a wrapper around them. </p>
+
+<ul>
+<li>Yihui Xie (knitr)</li>
+<li>RStudio (markdown)</li>
+<li>Edwin de Jonge (whisker)</li>
+</ul>
+
+    </article>
+	  <article class = "" id = "slide-48"> 
+	    <h3>HTML5 Slide Frameworks</h3>
+      
+
+<p><code>slidify</code> builds on HTML5 slide frameworks created by several individuals and organizations. I would like to acknowledge their work and efforts.</p>
+
+<table><thead>
+<tr>
+<th>Framework</th>
+<th>Author</th>
+<th>License</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="http://code.google.com/p/html5slides/">HTML5Slides</a></td>
+<td>Luke Mah, Marcin Wichary</td>
+<td>Apache</td>
+</tr>
+<tr>
+<td><a href="https://github.com/imakewebthings/deck.js">deck.js</a></td>
+<td>Caleb Troughton</td>
+<td>MIT/GPL</td>
+</tr>
+<tr>
+<td><a href="https://github.com/paulrouget/dzslides">dzslides</a></td>
+<td>Paul Roget</td>
+<td>DWTFYW</td>
+</tr>
+<tr>
+<td><a href="http://slides.html5rocks.com/">html5rocks</a></td>
+<td>Google</td>
+<td>Apache</td>
+</tr>
+<tr>
+<td><a href="https://github.com/adamzap/landslide">Landslide</a></td>
+<td>Adam Zapletal</td>
+<td>Apache</td>
+</tr>
+<tr>
+<td><a href="https://github.com/pepelsbey/shower">Shower</a></td>
+<td>Vadim Makeev</td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><a href="http://www.w3.org/Talks/Tools/Slidy2/Overview.html#">slidy</a></td>
+<td>Dave Ragett</td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><a href="">slideous</a></td>
+<td>Stefan Goessner</td>
+<td>LGPL</td>
+</tr>
+</tbody></table>
+
+    </article>
+	  <article class = "" id = "slide-49"> 
+	    <h3>Syntax Highlighters</h3>
+      
+
+<p>Syntax highlighting is powered by open source highlighters. I would like to than the authors of these tools.</p>
+
+<table><thead>
+<tr>
+<th>Highighter</th>
+<th>Author</th>
+<th>License</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><a href="https://github.com/isagalaev/highlight.js">highlight.js</a></td>
+<td>Software Maniacs</td>
+<td>MIT</td>
+</tr>
+<tr>
+<td><a href="http://code.google.com/p/google-code-prettify/">Google Prettify</a></td>
+<td>Google</td>
+<td>Apache</td>
+</tr>
+<tr>
+<td><a href="http://cran.r-project.org/web/packages/highlight/index.html">highlight</a></td>
+<td>Romain Francois</td>
+<td>GPL</td>
+</tr>
+</tbody></table>
+
+    </article>
+	  <article class = "" id = "slide-50"> 
+	    <h3>Markdown-HTML5 Converters</h3>
+      
+
+<p>I have extensively borrowed ideas and features from HTML5 slide converters written in other languages. I would like to acknowledge contributions of these authors.</p>
+
+<table><thead>
+<tr>
+<th>Language</th>
+<th>Framework</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Ruby</td>
+<td><a href="http://github.com/schacon/showoff">showoff</a></td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td><a href="https://github.com/geraldb/slideshow">slideshow</a></td>
+</tr>
+<tr>
+<td>Ruby</td>
+<td><a href="https://github.com/infews/keydown">keydown</a></td>
+</tr>
+<tr>
+<td>Python</td>
+<td><a href="https://github.com/nyergler/hieroglyph">hieroglyph</a></td>
+</tr>
+<tr>
+<td>Python</td>
+<td><a href="https://github.com/adamzap/landslide">landslide</a></td>
+</tr>
+<tr>
+<td>Haskell</td>
+<td><a href="https://github.com/jgm/pandoc">pandoc</a></td>
+</tr>
+</tbody></table>
+
+    </article>
+	  <article class = "" id = "license"> 
+	    <h3>License</h3>
+      <style>
+#license p{
+  font-family: 'Crimson Text';
+  font-size: 22px;
+  line-height:26px;
+}
+
+</style>
+
+
+
+<p><code>slidify</code> is made available under the MIT License. All included <code>css</code> and <code>javascript</code> are licensed under the terms specified by the respective libraries.</p>
+
+<p><strong>MIT License</strong></p>
+
+<p>Copyright (C) 2012 Ramnath Vaidyanathan</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE</p>
+
+    </article>
+	  <article class = "" id = "slide-52"> 
+	    <h1>References</h1>
+      
+
+    </article>
+	  <article class = "" id = "slide-53"> 
+	    <h3>HTML5 Slides with R</h3>
+      
+
+<ol>
+<li><a href="http://goo.gl/L79xW">An Introduction to R</a></li>
+<li><a href="http://goo.gl/7C907">How to Make HTML Slides with knitr</a></li>
+<li><a href="http://goo.gl/Uqnq3">Fancy HTML5 Slides with knitr and Pandoc</a></li>
+<li><a href="http://goo.gl/QlTA4">Visualize World Bank Data</a></li>
+<li><a href="http://goo.gl/kdhBO">Interactive Presentations with deck.js</a></li>
+</ol>
+
+    </article>
+	  <article class = "" id = "slide-54"> 
+	    <h3>R Markdown</h3>
+      
+
+<ol>
+<li><a href="http://goo.gl/oTeV5">Interactive Reports in R with knitr and RStudio</a></li>
+<li><a href="http://goo.gl/ALjtQ">Getting Started with R Markdown, knitr and RStudio</a></li>
+<li><a href="http://goo.gl/84D5E">Dynamic Content RStudio, Markdown and Marked</a></li>
+<li><a href="http://goo.gl/KKdaf">Using Markdown with RStudio</a></li>
+<li><a href="http://goo.gl/ZQF1u">Example Reproducible Report using R Markdown</a></li>
+<li><a href="http://goo.gl/cVS9W">Interactive Slides with R, googleVis and knitR</a></li>
+<li><a href="http://goo.gl/ZTSD7">knitr, Slideshows and Dropbox</a></li>
+</ol>
+
+<!-- http://rpubs.com/publish/claim/681/4cbbeb6f03014af79ad87ab44296de3e -->
+
+    </article>
+  </section>
+</body>
+  <!-- LOAD JAVASCRIPTS  -->
+	<script src='/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/html5slides/slides.js'></script>
+	<!-- LOAD MATHJAX JS -->
+  <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         inlineMath: [['$','$'], ['\\(','\\)']],
+         processEscapes: true
+       }
+     });
+  </script>
+  <script type="text/javascript"  
+src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <!-- DONE LOADING MATHJAX -->
+	  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING CSS FILES AND JS -->
+
+		<script src="assets/scripts/1.raphael.js"></script>
+<script src="assets/scripts/2.g.raphael.js"></script>
+<script src="assets/scripts/3.g.pie.js"></script>
+
+	
+</html>

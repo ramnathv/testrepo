@@ -1,0 +1,25 @@
+/* Shout */
+article.shout section:before {
+	display:none;
+}
+article.shout h2 {
+  position:absolute;
+  top:50%;
+  left:0;
+  width:100%;
+  text-align:center;
+  line-height:1;
+  font-size:200px;
+  font-family: 'Yanone Kaffeesatz', 'Helvetica Neue';
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%);
+}
+article.shout h2 a[target=_blank] {
+    margin:0;
+}
+article.shout h2 a[target=_blank]:after {
+  content:'';
+}

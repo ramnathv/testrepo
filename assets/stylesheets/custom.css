@@ -1,0 +1,251 @@
+/*Put your custom css styles here. This file gets loaded the last*/
+
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Caption);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC:700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+@import url(http://fonts.googleapis.com/css?family=Oswald:700,400);
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+
+/*@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700);*/
+
+/*h1 {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  background-color: orange;
+  font-color: white;
+  padding: 15px 15px;
+}
+*/
+/*h3 {
+  text-transform: uppercase;
+}*/
+
+.slides.template-new > article {
+  background-color: #FCFCF9;
+}
+
+.slides.template-default > article:not(.nobackground):not(.biglogo) {
+  background: url(../media/slidify-logo-small.png) 765px 650px no-repeat;   
+  background-color: white;  
+}
+
+.slides.layout-widescreen > article:not(.nobackground):not(.biglogo),
+.slides.layout-faux-widescreen > article:not(.nobackground):not(.biglogo) {
+  background: url(../media/slidify-logo-small.png) 960px 650px no-repeat;   
+  background-color: white;  
+}
+
+#title-slide h1 {
+    color: #222;
+    font-size: 3.2em;
+    margin-top: 35%;
+    background: rgba(255, 255, 255, 0.65);
+    line-height: 1.5em;
+    padding-left: 30px;
+    font-family: 'Amatic SC', cursive;
+}
+
+/* Slide Classes from Showoff */
+/*.bullets > ul {
+  list-style: none;
+  font-size: 3em;
+  padding-left: 0px;
+}
+.bullets > ul > li {
+    text-align: center;
+    padding: 25px;
+}
+.smbullets > ul {
+    font-size: 2.5em;
+}
+.smbullets > ul > li {
+    text-align: center;
+    padding: 10px;
+}
+*//* Slide Classes from Showoff */
+
+pre {
+ white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+}
+
+
+.modal-open .dropdown-menu {
+  z-index: 2050;
+}
+.modal-open .dropdown.open {
+  *z-index: 2050;
+}
+.modal-open .popover {
+  z-index: 2060;
+}
+.modal-open .tooltip {
+  z-index: 2070;
+}
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+.modal-backdrop.fade {
+  opacity: 0;
+}
+.modal-backdrop, .modal-backdrop.fade.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1050;
+  max-height: 600px;
+  overflow: auto;
+  width: 700px;
+  margin: -300px 0 0 -350px;
+  background-color: #ffffff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  *border: 1px solid #999;
+  /* IE6-7 */
+
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.modal.fade {
+  -webkit-transition: opacity .3s linear, top .3s ease-out;
+  -moz-transition: opacity .3s linear, top .3s ease-out;
+  -ms-transition: opacity .3s linear, top .3s ease-out;
+  -o-transition: opacity .3s linear, top .3s ease-out;
+  transition: opacity .3s linear, top .3s ease-out;
+  top: -25%;
+}
+.modal.fade.in {
+  top: 50%;
+}
+.modal-header {
+  padding: 9px 15px;
+  border-bottom: 1px solid #eee;
+}
+.modal-header .close {
+  margin-top: 2px;
+}
+.modal-body {
+  padding: 15px;
+}
+.modal-body .modal-form {
+  margin-bottom: 0;
+}
+.modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  -webkit-border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  -webkit-box-shadow: inset 0 1px 0 #ffffff;
+  -moz-box-shadow: inset 0 1px 0 #ffffff;
+  box-shadow: inset 0 1px 0 #ffffff;
+  *zoom: 1;
+}
+.modal-footer:before, .modal-footer:after {
+  display: table;
+  content: "";
+}
+.modal-footer:after {
+  clear: both;
+}
+.modal-footer .btn {
+  float: right;
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+
+section.slide p{
+   text-align:justify;
+   font-size: 20px;
+   line-height: 24px;
+}
+
+article.smaller q, div.author{
+   font-size: 32px;
+   line-height: 38px;
+}
+
+section p, li, li.incremental
+article p, li, li.build{
+  font-family: "Lato" 'Open Sans', sans-serif;
+/*  color: #3f3f3f;*/
+  color: #222222;
+  font-size: 26px;
+  line-height: 34px;
+  text-align:justify;
+}
+
+h1 {
+  color: #777D4F;
+  font-size:65px;
+  line-height:70px;
+  /*line-height: 40px;*/
+}
+
+
+h3 {
+  font-family: 'Lato' 'Oswald', sans-serif;
+  font-size: 50px;
+  line-height:60px;
+  color: #E31A1C;
+}
+
+pre {
+  font-family: 'Ubuntu Mono', sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+code {
+  /*  color: #9E0508; burgundy*/
+  font-family: Consolas, Monaco, 'Ubuntu Mono', sans-serif;
+  color: #26547c;
+  font-weight: bolder;
+}
+
+.rimage.left {
+  text-align: left;
+}
+.rimage.right {
+  text-align: right;
+}
+.rimage.center {
+  text-align: center;
+}
+
+
+
+
