@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->  <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+	
+	<title>Getting Started with deck.js</title>
+  <meta name="description" content="Getting Started with deck.js">
+  <meta name="author" content="">
+  <meta name="generator" content="slidify" />
+	
+	
+	
+	<!-- Core and extension CSS files -->
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/core/deck.core.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/status/deck.status.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/scale/deck.scale.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/codemirror/deck.codemirror.css">
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/codemirror/themes/default.css">
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/themes/style/swiss.css">
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/themes/transition/horizontal-slide.css">
+	<script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/support/modernizr.custom.js"></script>
+	
+  <!-- LOAD STYLE SHEETS -->
+	<link rel="stylesheet" href="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/highlight/styles/bclear.css">
+  <!-- LOAD CUSTOM CSS -->
+  <link rel="stylesheet" href="assets/stylesheets/slidify.css">
+<link rel="stylesheet" href="assets/stylesheets/test_styles.css">
+
+    
+</head>
+
+<body class="deck-container">
+
+  <!-- Begin slides -->
+  <section class="slide">
+    <h1>Getting Started with deck.js</h1>
+	  
+
+  </section>
+  <section class="slide">
+    <h2>How to Make a Deck</h2>
+	  
+
+<h3>Write Slides</h3>
+
+<p>Slide content is simple HTML</p>
+
+<h3>Choose Themes</h3>
+
+<p>One for slide styles and one for deck transitions</p>
+
+<h3>Include Extensions</h3>
+
+<p>Add extra functionality to your deck or leave it stripped down.</p>
+
+  </section>
+  <section class="slide">
+    
+	  <p><img src = 'http://placehold.it/700x500' class = 'vcenter'/></p>
+
+  </section>
+  <section class="slide">
+    <h2>Some Code</h2>
+	  <style>
+pre.knitr {
+  font-family: 'Consolas';
+  font-size: 18px;
+}
+</style>
+
+
+
+<div class="chunk"><div class="rcode"><div class="source"><pre class="knitr R"><span class="functioncall">citet</span><span class="keyword">(</span><span class="functioncall">c</span><span class="keyword">(</span><span class="argument">Halpern2006</span> <span class="argument">=</span> <span class="string">"10.1111/j.1461-0248.2005.00827.x"</span><span class="keyword">)</span><span class="keyword">)</span>
+<span class="comment"># then cite in your markdown file</span>
+<span class="functioncall">citet</span><span class="keyword">(</span><span class="string">"Halpern2006"</span><span class="keyword">)</span>
+
+
+<span class="comment"># or read citations from a bibtex file which can be automatically generated and updated from services like Mendeley</span>
+
+<span class="symbol">bib</span> <span class="assignement">&lt;-</span> <span class="functioncall">read.bibtex</span><span class="keyword">(</span><span class="string">"example.bib"</span><span class="keyword">)</span>
+<span class="comment"># then cite inline</span>
+<span class="functioncall">citet</span><span class="keyword">(</span><span class="symbol">bib</span><span class="keyword">[[</span><span class="string">"knitr"</span><span class="keyword">]</span><span class="keyword">]</span><span class="keyword">)</span>
+</pre></div></div></div>
+
+  </section>
+  <section class="slide">
+    
+	  <iframe class = 'vcenter' width="853" height="480" src="http://www.youtube.com/embed/Me5Ss7PZGP0?rel=0" frameborder="0" allowfullscreen></iframe>
+
+  </section>
+  <section class="slide">
+    
+	  <div class="chunk"><div class="rimage vcenter"><img src="figure/graph.png" class="plot" /></div></div>
+
+  </section>
+  <section class="slide">
+    <h2>Wolfram Demo</h2>
+	  
+
+<script type='text/javascript'  
+  src='http://demonstrations.wolfram.com/javascript/embed.js' >
+</script>
+<script type='text/javascript'>
+  var demoObj = new DEMOEMBED(); 
+  demoObj.run('MicrowaveOven', '', '800', '600');
+</script>
+
+
+  </section>
+  <!-- deck.navigation snippet -->
+  <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+  <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+  <!-- deck.status snippet -->
+  <p class="deck-status">
+	<span class="deck-status-current"></span>
+	  /
+	<span class="deck-status-total"></span>
+  </p>
+
+  <!-- deck.goto snippet -->
+  <form action="." method="get" class="goto-form">
+  	<label for="goto-slide">Go to slide:</label>
+  	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+  	<datalist id="goto-datalist"></datalist>
+  	<input type="submit" value="Go">
+  </form>
+
+  <!-- deck.hash snippet -->
+  <a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+
+  <!-- Grab CDN jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/support/jquery-1.7.min.js"><\/script>')</script>
+
+  <!-- Deck Core and extensions -->
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/core/deck.core.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/hash/deck.hash.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/menu/deck.menu.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/goto/deck.goto.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/status/deck.status.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/navigation/deck.navigation.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/scale/deck.scale.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/codemirror/codemirror.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/codemirror/mode/javascript/javascript.js"></script>
+  <script src="/Library/Frameworks/R.framework/Versions/2.15/Resources/library/slidify/libraries/deck.js/extensions/codemirror/deck.codemirror.js"></script>
+
+
+  <!-- Initialize the deck -->
+  <script>
+  $(function() {
+  	$.deck('.slide');
+  });
+  </script>
+  
+    <!-- LOAD MATHJAX JS -->
+  <script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+       tex2jax: {
+         inlineMath: [['$','$'], ['\\(','\\)']],
+         processEscapes: true
+       }
+     });
+  </script>
+  <script type="text/javascript"  
+src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <!-- DONE LOADING MATHJAX -->
+
+  <script src="assets/scripts/1.raphael.js"></script>
+<script src="assets/scripts/2.g.raphael.js"></script>
+<script src="assets/scripts/3.g.pie.js"></script>
+</body>
+</html>
